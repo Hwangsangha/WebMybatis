@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="/">HOME</a>
+	<h1>게시판 리스트페이지</h1>
+	<a href="/boards/registration">게시글 작성</a>
+	<table>
+		<tr>
+			<td>글번호</td>
+			<td>제목</td>
+			<td>조회수</td>
+			<td>작성자</td>
+			<td>작성일</td>
+		</tr>
+		<tr th:each="dto:${list}">
+			<td th:text="${dto.bno}">글번호</td>
+			<td th:text="${dto.subject}">제목</td>
+			<td th:text="${dto.readCount}">조회수</td>
+			<td th:text="${dto.creater}">작성자</td>
+			<td th:text="${dto.createdDate}">작성일</td>
+		</tr>
+	</table>
+</body>
+</html>
