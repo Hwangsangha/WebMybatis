@@ -7,5 +7,12 @@
  	<select id="findAll" resultType="com.example.demo.domain.dto.board.BoardDTO">
  		select * from board order by bno desc
  	</select>
-
+	<select id="save">
+ 		insert into board(bno, subject, content, creater)
+ 		
+ 	</select>
+ 	<select id="findById" resultType="com.example.demo.domain.dto.board.BoardDTO">
+ 		select * from board
+ 		where bno=#{bno}
+ 	</select>
  </mapper>

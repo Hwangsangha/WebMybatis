@@ -27,4 +27,9 @@ public class BoardServiceProc implements BoardService {
 		model.addAttribute("list", result);
 	}
 
+	@Override
+	public void save(BoardDTO dto) {
+		mapper.save(dto);
+	}
+
 }

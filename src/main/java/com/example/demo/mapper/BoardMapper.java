@@ -10,4 +10,6 @@ import com.example.demo.domain.dto.board.BoardDTO;
 public interface BoardMapper {
 	
 	List<BoardDTO> findAll();
+
+	void save(BoardDTO dto);
 }
