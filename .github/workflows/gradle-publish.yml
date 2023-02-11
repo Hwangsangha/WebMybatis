@@ -2,9 +2,9 @@ name: ci cd Chang Dong Blue aws,gradle,java
 
 on:
   push:
-    branches: ["main"]
-  # pull_request:
-  # branches: ["main"]
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
 
 permissions:
   contents: read
@@ -32,9 +32,9 @@ jobs:
 
       - name: credentials properties
         env:
-          secret_properties: ${{ secrets.W_PATH }}
-          the_secret: ${{ secrets.W_MDB }}
-        run:  touch src/main/resources/application-mariadb.yml && echo "" > src/main/resources/application-mariadb.yml
+          db: ${{ secrets.APP_DB }}
+          rds: ${{ secrets.RDS }}
+        run:  touch $db && echo "$rds" > $db
         shell: bash
 
       - name: Gradle Build Action
