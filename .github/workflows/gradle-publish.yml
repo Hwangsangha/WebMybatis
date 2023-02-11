@@ -1,4 +1,4 @@
-name: ci cd Chang Dong Blue aws,gradle,java
+name: ci cd WebMybatis aws,gradle,java
 
 on:
   push:
