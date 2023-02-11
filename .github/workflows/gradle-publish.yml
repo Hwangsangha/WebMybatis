@@ -2,7 +2,7 @@ name: ci cd Chang Dong Blue aws,gradle,java
 
 on:
   push:
-   # branches: ["master"]
+    branches: ["master"]
   pull_request:
     branches: ["master"]
 
