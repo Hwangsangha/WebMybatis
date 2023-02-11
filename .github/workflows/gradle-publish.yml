@@ -2,7 +2,7 @@ name: ci cd Chang Dong Blue aws,gradle,java
 
 on:
   push:
-    branches: ["master"]
+   # branches: ["master"]
   pull_request:
     branches: ["master"]
 
@@ -41,7 +41,7 @@ jobs:
         uses: gradle/gradle-build-action@v2.3.3
         with:
           gradle-version: 7.6
-          arguments: clean bootJar
+          arguments: clean war
 
       # - name: post build action
       #   run: scr
